@@ -18,16 +18,16 @@
         <nav>
             <ul class="sidebar">
                 <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">PROJECTS</a></li>
-                <li><a href="">SKILLS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a>PROJECTS</a></li>
+                <li><a>SKILLS</a></li>
             </ul>
             <ul>
-                <li><a href="">HAYDEN</a></li>
-                <li class="hideOnMobile"><a href="">ABOUT</a></li>
-                <li class="hideOnMobile"><a href="">PROJECTS</a></li>
-                <li class="hideOnMobile"><a href="">SKILLS</a></li>
-                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+                <li><a onclick="topFunction()">HAYDEN</a></li>
+                <li class="hideOnMobile"><a href="#about">ABOUT</a></li>
+                <li class="hideOnMobile"><a>PROJECTS</a></li>
+                <li class="hideOnMobile"><a>SKILLS</a></li>
+                <li class="menu-button" onclick=showSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
             </ul>
         </nav>
         <div id="about">
@@ -61,6 +61,11 @@
             function hideSidebar(){
                 const sidebar = document.querySelector('.sidebar')
                 sidebar.style.display = 'none'
+            }
+
+            function topFunction() {
+                document.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
             }
         </script>
     </body>
